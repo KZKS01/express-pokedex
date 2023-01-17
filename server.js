@@ -8,6 +8,9 @@ const app = express();
 //configure database
 const pokemons = require('./models/pokemon.js');
 
+//static middleware takes the line 9 in index.ejs go into "public" folder
+app.use(express.static('public')); 
+
 app.get('/', function(req, res){
     res.redirect('/pokemons');  //automatically goes to the pokemons link
 });
@@ -15,9 +18,14 @@ app.get('/', function(req, res){
 //index - GET pokemon
 app.get('/pokemons', function(req, res){
     res.render('index.ejs', {pokemonData: pokemons});
-})
+});
 
 //new - GET /pokemons/new - send the user to a page with a form where thy can add a new pokemon
+app.get('/pokemons/new', function(req, res){
+    res.render('new.ejs', {
+        title: 'Create a new Pokemon |'
+    });
+})
 
 //delete - DELETE - /pokemons/:index
 
@@ -33,9 +41,9 @@ app.get('/pokemons/:index', function(req, res){
     res.render('show.ejs', {
         pokemon: pokemon,
         title: pokemons.name + 'details |' //page name
-    })
-})
+    });
+});
 
 app.listen(port, function(){
     console.log(`Express is listening on port ${port}`);
-})
+});

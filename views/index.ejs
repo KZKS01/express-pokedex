@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Index Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
 </head>
 <body>
     <nav>
@@ -14,7 +16,7 @@
     <h1>Pokemons</h1>
     <% for(let i = 0; i < pokemonData.length; i++) {%> 
     <h3><%= pokemonData[i].name %> </h3>
-    <img src="<%= pokemonData[i].img %>" alt="Pokemon Image">
+    <img id="img" src="<%= pokemonData[i].img %>" alt="Pokemon Image">
     <% } %> 
-</body>
+    </body>
 </html>

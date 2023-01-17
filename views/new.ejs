@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Pokemon</title>
+</head>
+<body>
+    <form action="/pokemons" method="post">
+        <label> Name:
+            <input type="text" name="name" placeholder="e.g. Bulbasaur">
+        </label>
+        <br>
+        <label> Link to the new pokemon img:
+            <input type="url" name="url" placeholder="e.g. http://img.pokemondb.net/artwork/bulbasaur.jpg">
+        </label>
+        <br>
+        <label> Types: 
+            <input type="text" name="type1" placeholder="e.g. grass">
+            <input type="text" name="type2" placeholder="e.g. poison">
+        </label>
+        <br>
+        <label> HP: 
+            <input type="text" name="hp" placeholder="e.g. 45">
+        </label>
+        <br>
+        <label> Attack: 
+            <input type="text" name="attack" placeholder="e.g. 49">
+        </label>
+        <br>
+        <label> Defense: 
+            <input type="text" name="defense" placeholder="e.g. 49">
+        </label>
+        <br>
+        <label> Spattack: 
+            <input type="text" name="spattack" placeholder="e.g. 65">
+        </label>
+        <br>
+        <label> Spdefense: 
+            <input type="text" name="spdefense" placeholder="e.g. 65">
+        </label>
+        <br>
+        <label> Speed: 
+            <input type="text" name="speed" placeholder="e.g. 45">
+        </label>
+        <br>
+        <label>
+            <input type="button" value="Add New Pokemon">
+        </label>
+    </form>
+</body>
+</html>
