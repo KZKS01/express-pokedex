@@ -13,6 +13,7 @@
     </nav>
     <h1>Pokemons</h1>
     <% for(let i = 0; i < pokemonData.length; i++) {%> 
+    <h3><%= pokemonData[i].name %> </h3>
     <img src="<%= pokemonData[i].img %>" alt="Pokemon Image">
     <% } %> 
 </body>

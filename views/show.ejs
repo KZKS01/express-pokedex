@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Show Page</title>
+</head>
+<body>
+    <nav>
+        <a href="/pokemons">back</a>
+    </nav>
+    <h1>Detail for <%= pokemon.name %> </h1>
+    <img src="<%= pokemon.img %>" alt="img of <%= pokemon.name %>">
+    <h2><strong>Type: </strong></h2>
+    <ul>
+        <% for(let i = 0; i < pokemon.type.length; i++) {%>
+        <li><%= pokemon.type[i] %></li>
+        <% console.log(pokemon.type[i]) %> 
+        <% } %> 
+    </ul>
+    <h2><strong>Stats: </strong></h2>
+    <ul> 
+        <li><strong>HP: </strong><%= pokemon.stats.hp %> </li>
+        <li><strong>Attack: </strong><%= pokemon.stats.attack %> </li>
+        <li><strong>Defense: </strong><%= pokemon.stats.defense %> </li>
+        <li><strong>Spattack: </strong><%= pokemon.stats.spattack %> </li>
+        <li><strong>Spdefense: </strong><%= pokemon.stats.spdefense %> </li>
+        <li><strong>Speed: </strong><%= pokemon.stats.speed %> </li>
+    </ul>
+</body>
+</html>

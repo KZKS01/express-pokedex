@@ -1,5 +1,6 @@
 //require dependencies
 const express = require('express');
+const pokemonList = require('./models/pokemon.js');
 const port = 3000;
 //initialize the express application
 const app = express();
@@ -27,6 +28,13 @@ app.get('/pokemons', function(req, res){
 //edit - GET /pokemons/:index/edit - sending a page that allows a user to edit a pokemon
 
 //show - GET /pokemons/:someUniqueIndentifier
+app.get('/pokemons/:index', function(req, res){
+    const pokemon = pokemonList[req.params.index];
+    res.render('show.ejs', {
+        pokemon: pokemon,
+        title: pokemons.name + 'details |' //page name
+    })
+})
 
 app.listen(port, function(){
     console.log(`Express is listening on port ${port}`);
