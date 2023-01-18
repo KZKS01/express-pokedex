@@ -15,8 +15,13 @@
     </nav>
     <h1>Pokemons</h1>
     <% for(let i = 0; i < pokemonData.length; i++) {%> 
-    <h3><%= pokemonData[i].name %> </h3>
-    <img id="img" src="<%= pokemonData[i].img %>" alt="Pokemon Image">
+    <a href="/pokemons/<%= i %>"><h3><%= pokemonData[i].name %> </h3></a>
+    <a href="/pokemons/<%= i %>"><img src="<%= pokemonData[i].img %>" alt="Pokemon Image"></a>
+    <a href="/pokemons/<%= i %>/edit">Edit</a> 
+    <form action="/pokemons/<%= i %>?_method=delete" method="post"> 
+        <input type="submit" value="delete">
+    </form>
     <% } %> 
+    
     </body>
 </html>

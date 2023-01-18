@@ -12,6 +12,8 @@
     </nav>
     <h1>Detail for <%= pokemon.name %> </h1>
     <img src="<%= pokemon.img %>" alt="img of <%= pokemon.name %>">
+    <br>
+    <h2 style="display: inline-block;">ID:&nbsp</h2><div style="display: inline-block;"> <%= pokemon.id %></div>
     <h2><strong>Type: </strong></h2>
     <ul>
         <% for(let i = 0; i < pokemon.type.length; i++) {%>

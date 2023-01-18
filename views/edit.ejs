@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit A Pokemon</title>
+</head>
+<body>
+    <h1>Edit <%= pokemonE.name %></h1>
+    <!-- index is from server.js line 57 -->
+    <form action="/pokemons/<%= index %>?_method=put" method="post">
+    <label>ID:
+        <input type="text" name="id" value="<%= pokemonE.id %>">
+    </label>
+    <label>Name:
+        <input type="text" name="name" value="<%= pokemonE.name %>">
+    </label>
+    <label>Link to the new pokemon img:
+        <input type="text" name="img" value="<%= pokemonE.img %>">
+    </label>
+    <label>Types: 
+        <input type="text" name="type" value="<%= pokemonE.type[0] %>">
+        <input type="text" name="type" value="<%= pokemonE.type[1] %>">
+    </label>
+    <label>HP:
+        <input type="text" name="hp" value="<%= pokemonE.stats.hp %>">
+    </label>
+    <label>Attack:
+        <input type="text" name="attack" value="<%= pokemonE.stats.attack %>">
+    </label>
+    <label>Defense: 
+        <input type="text" name="defense" value="<%= pokemonE.stats.defense %>">
+    </label>
+    <label>Spattack: 
+        <input type="text" name="spattack" value="<%= pokemonE.stats.spattack %>">
+    </label>
+    <label>Spdefense: 
+        <input type="text" name="spdefense" value="<%= pokemonE.stats.spdefense %>">
+    </label>
+    <label>Speed: 
+        <input type="text" name="speed" value="<%= pokemonE.stats.speed %>">
+    </label>
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>
