@@ -1,0 +1,20 @@
+body{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color: lightblue;
+}
+.allPokemon{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+img{
+    border: solid black 1px;
+    border-radius: 10%;
+    display: block; /* display the image as a block element */
+}
+
+.btns{
+    display: flex;
+}

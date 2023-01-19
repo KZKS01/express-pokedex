@@ -52,6 +52,13 @@ app.put('/pokemons/:index', function(req, res){
 
 //create - POST /pokemons - take form data and create a new pokemon with it
 app.post('/pokemons', function(req, res){
+    req.body.stats = {};
+    req.body.stats.hp = req.body.hp;
+    req.body.stats.attack = req.body.attack;
+    req.body.stats.defense = req.body.defense;
+    req.body.stats.spattack = req.body.spattack;
+    req.body.stats.spdefense = req.body.spdefense;
+    req.body.stats.speed = req.body.speed;
     pokemonList.push(req.body);
     console.log(req.body);
     res.redirect('/pokemons');

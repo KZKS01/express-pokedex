@@ -1,6 +1,7 @@
 <!-- Home -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +10,25 @@
     <link rel="stylesheet" href="/css/style.css">
     <script defer src="/js/script.js"></script>
 </head>
+
 <body>
     <nav>
         <a href="/pokemons/new">Add a New Pokemon</a>
     </nav>
-    <h1>Pokemons</h1>
-    <% for(let i = 0; i < pokemonData.length; i++) {%> 
-    <a href="/pokemons/<%= i %>"><h3><%= pokemonData[i].name %> </h3></a>
-    <a href="/pokemons/<%= i %>"><img src="<%= pokemonData[i].img %>" alt="Pokemon Image"></a>
-    <a href="/pokemons/<%= i %>/edit">Edit</a> 
-    <form action="/pokemons/<%= i %>?_method=delete" method="post"> 
-        <input type="submit" value="delete">
-    </form>
-    <% } %> 
-    
-    </body>
+    <div>
+        <h1>Pokemons</h1>
+    </div>
+    <div class="allPokemon">
+        <% for(let i = 0; i < pokemonData.length; i++) {%>
+        <div><a href="/pokemons/<%= i %>"><img src="<%= pokemonData[i].img %>" alt="Pokemon Image"></a>
+            <div class="btns"><a href="/pokemons/<%= i %>/edit"><button class="change">Edit</button></a>
+                <form action="/pokemons/<%= i %>?_method=delete" method="post">
+                    <input type="submit" value="delete" class="change">
+                </form>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</body>
+
 </html>

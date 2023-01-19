@@ -6,38 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit A Pokemon</title>
 </head>
-<body>
+<body style="background-color: rgb(128, 145, 240); display: flex; flex-direction: column; ">
     <h1>Edit <%= pokemonE.name %></h1>
     <!-- index is from server.js line 57 -->
     <form action="/pokemons/<%= index %>?_method=put" method="post">
     <label>ID:
         <input type="text" name="id" value="<%= pokemonE.id %>">
     </label>
+    <br>
+    <br>
     <label>Name:
         <input type="text" name="name" value="<%= pokemonE.name %>">
     </label>
+    <br>
+    <br>
     <label>Link to the new pokemon img:
         <input type="text" name="img" value="<%= pokemonE.img %>">
     </label>
+    <br>
+    <br>
     <label>Types: 
         <input type="text" name="type" value="<%= pokemonE.type[0] %>">
         <input type="text" name="type" value="<%= pokemonE.type[1] %>">
     </label>
+    <br>
+    <br>
     <label>HP:
         <input type="text" name="hp" value="<%= pokemonE.stats.hp %>">
     </label>
+    <br>
+    <br>
     <label>Attack:
         <input type="text" name="attack" value="<%= pokemonE.stats.attack %>">
     </label>
+    <br>
+    <br>
     <label>Defense: 
         <input type="text" name="defense" value="<%= pokemonE.stats.defense %>">
     </label>
+    <br>
+    <br>
     <label>Spattack: 
         <input type="text" name="spattack" value="<%= pokemonE.stats.spattack %>">
     </label>
+    <br>
+    <br>
     <label>Spdefense: 
         <input type="text" name="spdefense" value="<%= pokemonE.stats.spdefense %>">
     </label>
+    <br>
+    <br>
     <label>Speed: 
         <input type="text" name="speed" value="<%= pokemonE.stats.speed %>">
     </label>
